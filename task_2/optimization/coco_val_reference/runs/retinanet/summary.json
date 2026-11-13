@@ -1,0 +1,926 @@
+{
+  "model": "retinanet_resnet50_fpn",
+  "weights": "COCO_V1",
+  "weights_url": "https://download.pytorch.org/models/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+  "weights_path": "task_2/retinanet/weights/checkpoints/retinanet_resnet50_fpn_coco-eeacb38b.pth",
+  "weights_sha256": "eeacb38b7cec8cf93c57867e05eaab621047f19b0d2ec5accaa405f690da15b7",
+  "device": "cpu",
+  "environment": {
+    "python": "3.9.13",
+    "torch": "2.8.0+cpu",
+    "torchvision": "0.23.0+cpu",
+    "cpu_threads": 4
+  },
+  "timing_scope": "inference_ms sums model forward across all views; pipeline_ms includes preprocessing, decoding and cross-tile merge; includes final vehicle NMS; excludes file I/O and rendering",
+  "image_count": 6,
+  "total_detections": 59,
+  "results": [
+    {
+      "source": "task_2/optimization/coco_val_reference/images/000000000724.jpg",
+      "image_width": 375,
+      "image_height": 500,
+      "coordinate_system": "EXIF-corrected image pixels, [x1, y1, x2, y2]",
+      "threshold": 0.25,
+      "inference_ms": 4246.323200000001,
+      "classes_filter": [
+        "bus",
+        "car",
+        "truck"
+      ],
+      "pipeline_ms": 4248.560000000001,
+      "slicing": {
+        "tile_count": 0,
+        "total_calls": 1,
+        "include_full": true
+      },
+      "vehicle_nms": {
+        "enabled": false,
+        "iou_threshold": 0.6,
+        "classes": [
+          "bus",
+          "car",
+          "motorcycle",
+          "truck"
+        ],
+        "input_count": 2,
+        "output_count": 2,
+        "removed_count": 0,
+        "suppressed_detections": []
+      },
+      "nms_method": "hard",
+      "soft_nms": null,
+      "candidate_threshold": 0.25,
+      "model_postprocess": {
+        "nms_iou": 0.5,
+        "topk_per_level": 1000,
+        "candidate_limit": 300
+      },
+      "detections": [
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.599132776260376,
+          "box_xyxy": [
+            101.69302368164062,
+            273.404541015625,
+            143.7192840576172,
+            309.6339416503906
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.3166431188583374,
+          "box_xyxy": [
+            118.31607055664062,
+            279.4151306152344,
+            144.32125854492188,
+            309.2662048339844
+          ]
+        }
+      ]
+    },
+    {
+      "source": "task_2/optimization/coco_val_reference/images/000000002006.jpg",
+      "image_width": 640,
+      "image_height": 480,
+      "coordinate_system": "EXIF-corrected image pixels, [x1, y1, x2, y2]",
+      "threshold": 0.25,
+      "inference_ms": 3910.0516999999986,
+      "classes_filter": [
+        "bus",
+        "car",
+        "truck"
+      ],
+      "pipeline_ms": 3913.7565999999993,
+      "slicing": {
+        "tile_count": 0,
+        "total_calls": 1,
+        "include_full": true
+      },
+      "vehicle_nms": {
+        "enabled": false,
+        "iou_threshold": 0.6,
+        "classes": [
+          "bus",
+          "car",
+          "motorcycle",
+          "truck"
+        ],
+        "input_count": 1,
+        "output_count": 1,
+        "removed_count": 0,
+        "suppressed_detections": []
+      },
+      "nms_method": "hard",
+      "soft_nms": null,
+      "candidate_threshold": 0.25,
+      "model_postprocess": {
+        "nms_iou": 0.5,
+        "topk_per_level": 1000,
+        "candidate_limit": 300
+      },
+      "detections": [
+        {
+          "class_id": 6,
+          "class_name": "bus",
+          "score": 0.9943051934242249,
+          "box_xyxy": [
+            51.35505676269531,
+            78.92424774169922,
+            597.674072265625,
+            419.3380126953125
+          ]
+        }
+      ]
+    },
+    {
+      "source": "task_2/optimization/coco_val_reference/images/000000006723.jpg",
+      "image_width": 640,
+      "image_height": 361,
+      "coordinate_system": "EXIF-corrected image pixels, [x1, y1, x2, y2]",
+      "threshold": 0.25,
+      "inference_ms": 5790.5160000000005,
+      "classes_filter": [
+        "bus",
+        "car",
+        "truck"
+      ],
+      "pipeline_ms": 5793.847,
+      "slicing": {
+        "tile_count": 0,
+        "total_calls": 1,
+        "include_full": true
+      },
+      "vehicle_nms": {
+        "enabled": false,
+        "iou_threshold": 0.6,
+        "classes": [
+          "bus",
+          "car",
+          "motorcycle",
+          "truck"
+        ],
+        "input_count": 10,
+        "output_count": 10,
+        "removed_count": 0,
+        "suppressed_detections": []
+      },
+      "nms_method": "hard",
+      "soft_nms": null,
+      "candidate_threshold": 0.25,
+      "model_postprocess": {
+        "nms_iou": 0.5,
+        "topk_per_level": 1000,
+        "candidate_limit": 300
+      },
+      "detections": [
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8863426446914673,
+          "box_xyxy": [
+            171.46978759765625,
+            204.49267578125,
+            197.08157348632812,
+            223.3397979736328
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8129557371139526,
+          "box_xyxy": [
+            203.97979736328125,
+            201.68077087402344,
+            237.30467224121094,
+            229.4609832763672
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.7441333532333374,
+          "box_xyxy": [
+            283.78485107421875,
+            200.99383544921875,
+            302.32989501953125,
+            212.27980041503906
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.6317048072814941,
+          "box_xyxy": [
+            220.86312866210938,
+            202.1953887939453,
+            240.87179565429688,
+            228.5937957763672
+          ]
+        },
+        {
+          "class_id": 6,
+          "class_name": "bus",
+          "score": 0.5756133794784546,
+          "box_xyxy": [
+            362.5654296875,
+            192.04476928710938,
+            398.9856872558594,
+            224.7323760986328
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.4869512617588043,
+          "box_xyxy": [
+            332.53887939453125,
+            200.31805419921875,
+            344.6975402832031,
+            210.92401123046875
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.4696941673755646,
+          "box_xyxy": [
+            504.46331787109375,
+            208.23655700683594,
+            522.820068359375,
+            223.80467224121094
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.46683454513549805,
+          "box_xyxy": [
+            505.3931579589844,
+            208.70860290527344,
+            538.5235595703125,
+            224.81593322753906
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.4519951045513153,
+          "box_xyxy": [
+            362.5654296875,
+            192.04476928710938,
+            398.9856872558594,
+            224.7323760986328
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.29532328248023987,
+          "box_xyxy": [
+            518.342529296875,
+            210.78729248046875,
+            542.8941040039062,
+            223.7920684814453
+          ]
+        }
+      ]
+    },
+    {
+      "source": "task_2/optimization/coco_val_reference/images/000000009891.jpg",
+      "image_width": 640,
+      "image_height": 480,
+      "coordinate_system": "EXIF-corrected image pixels, [x1, y1, x2, y2]",
+      "threshold": 0.25,
+      "inference_ms": 4146.645200000002,
+      "classes_filter": [
+        "bus",
+        "car",
+        "truck"
+      ],
+      "pipeline_ms": 4153.658400000001,
+      "slicing": {
+        "tile_count": 0,
+        "total_calls": 1,
+        "include_full": true
+      },
+      "vehicle_nms": {
+        "enabled": false,
+        "iou_threshold": 0.6,
+        "classes": [
+          "bus",
+          "car",
+          "motorcycle",
+          "truck"
+        ],
+        "input_count": 10,
+        "output_count": 10,
+        "removed_count": 0,
+        "suppressed_detections": []
+      },
+      "nms_method": "hard",
+      "soft_nms": null,
+      "candidate_threshold": 0.25,
+      "model_postprocess": {
+        "nms_iou": 0.5,
+        "topk_per_level": 1000,
+        "candidate_limit": 300
+      },
+      "detections": [
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8575968146324158,
+          "box_xyxy": [
+            349.9090576171875,
+            92.29597473144531,
+            639.3340454101562,
+            309.8999328613281
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.5195302963256836,
+          "box_xyxy": [
+            196.63568115234375,
+            135.92559814453125,
+            240.94830322265625,
+            183.96566772460938
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.3240138292312622,
+          "box_xyxy": [
+            220.0406951904297,
+            141.4449920654297,
+            241.8658905029297,
+            191.80020141601562
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.3081393837928772,
+          "box_xyxy": [
+            197.0786895751953,
+            135.59109497070312,
+            241.10801696777344,
+            184.4844207763672
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.2999217212200165,
+          "box_xyxy": [
+            160.4362030029297,
+            137.06024169921875,
+            194.96995544433594,
+            166.23049926757812
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.2971695065498352,
+          "box_xyxy": [
+            201.12876892089844,
+            90.26448059082031,
+            278.5330810546875,
+            185.73651123046875
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.2878541946411133,
+          "box_xyxy": [
+            199.977294921875,
+            110.59228515625,
+            260.5305480957031,
+            186.11094665527344
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.2736339867115021,
+          "box_xyxy": [
+            188.9122772216797,
+            95.15109252929688,
+            342.4347839355469,
+            187.12586975097656
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.27058807015419006,
+          "box_xyxy": [
+            186.87461853027344,
+            135.24073791503906,
+            206.29310607910156,
+            166.29591369628906
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.25421345233917236,
+          "box_xyxy": [
+            296.6890869140625,
+            106.6883316040039,
+            365.7359924316406,
+            246.8461151123047
+          ]
+        }
+      ]
+    },
+    {
+      "source": "task_2/optimization/coco_val_reference/images/000000017627.jpg",
+      "image_width": 640,
+      "image_height": 480,
+      "coordinate_system": "EXIF-corrected image pixels, [x1, y1, x2, y2]",
+      "threshold": 0.25,
+      "inference_ms": 4177.839299999999,
+      "classes_filter": [
+        "bus",
+        "car",
+        "truck"
+      ],
+      "pipeline_ms": 4179.892000000003,
+      "slicing": {
+        "tile_count": 0,
+        "total_calls": 1,
+        "include_full": true
+      },
+      "vehicle_nms": {
+        "enabled": false,
+        "iou_threshold": 0.6,
+        "classes": [
+          "bus",
+          "car",
+          "motorcycle",
+          "truck"
+        ],
+        "input_count": 18,
+        "output_count": 18,
+        "removed_count": 0,
+        "suppressed_detections": []
+      },
+      "nms_method": "hard",
+      "soft_nms": null,
+      "candidate_threshold": 0.25,
+      "model_postprocess": {
+        "nms_iou": 0.5,
+        "topk_per_level": 1000,
+        "candidate_limit": 300
+      },
+      "detections": [
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.9170061349868774,
+          "box_xyxy": [
+            479.2283935546875,
+            235.16465759277344,
+            566.4445190429688,
+            285.65020751953125
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8960881233215332,
+          "box_xyxy": [
+            174.52374267578125,
+            235.39401245117188,
+            270.416015625,
+            298.9917297363281
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.885032594203949,
+          "box_xyxy": [
+            407.5966796875,
+            235.34437561035156,
+            482.5035095214844,
+            283.9806213378906
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8457399606704712,
+          "box_xyxy": [
+            553.9047241210938,
+            241.41079711914062,
+            585.8792114257812,
+            279.2896423339844
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8435148000717163,
+          "box_xyxy": [
+            264.8702392578125,
+            229.4779052734375,
+            376.3768310546875,
+            304.3866882324219
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.7739059329032898,
+          "box_xyxy": [
+            597.9851684570312,
+            242.0894775390625,
+            640.0,
+            277.7594299316406
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.5588231682777405,
+          "box_xyxy": [
+            461.2244567871094,
+            231.04319763183594,
+            506.6807556152344,
+            261.4814758300781
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.5359715223312378,
+          "box_xyxy": [
+            29.42190933227539,
+            218.8302764892578,
+            135.00299072265625,
+            326.759033203125
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.4900353252887726,
+          "box_xyxy": [
+            338.4933166503906,
+            228.75717163085938,
+            377.6369323730469,
+            276.085205078125
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.4459913372993469,
+          "box_xyxy": [
+            27.655065536499023,
+            215.04214477539062,
+            104.2413330078125,
+            263.9138488769531
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.38683298230171204,
+          "box_xyxy": [
+            101.22681427001953,
+            241.12269592285156,
+            156.98236083984375,
+            282.771728515625
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.38488367199897766,
+          "box_xyxy": [
+            100.87969970703125,
+            241.09767150878906,
+            130.12379455566406,
+            278.04278564453125
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.33836403489112854,
+          "box_xyxy": [
+            29.42190933227539,
+            218.8302764892578,
+            135.00299072265625,
+            326.759033203125
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.3364276587963104,
+          "box_xyxy": [
+            597.9851684570312,
+            242.0894775390625,
+            640.0,
+            277.7594299316406
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.27541831135749817,
+          "box_xyxy": [
+            311.5833435058594,
+            228.1783905029297,
+            376.9151916503906,
+            287.9662780761719
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.2752488851547241,
+          "box_xyxy": [
+            207.89666748046875,
+            233.97947692871094,
+            331.2384338378906,
+            302.46624755859375
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.2638286352157593,
+          "box_xyxy": [
+            335.8418884277344,
+            228.10891723632812,
+            372.6667785644531,
+            255.94424438476562
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.2544359564781189,
+          "box_xyxy": [
+            439.59661865234375,
+            231.15382385253906,
+            506.8233337402344,
+            273.7366027832031
+          ]
+        }
+      ]
+    },
+    {
+      "source": "task_2/optimization/coco_val_reference/images/000000039484.jpg",
+      "image_width": 640,
+      "image_height": 437,
+      "coordinate_system": "EXIF-corrected image pixels, [x1, y1, x2, y2]",
+      "threshold": 0.25,
+      "inference_ms": 4279.779699999999,
+      "classes_filter": [
+        "bus",
+        "car",
+        "truck"
+      ],
+      "pipeline_ms": 4282.077700000002,
+      "slicing": {
+        "tile_count": 0,
+        "total_calls": 1,
+        "include_full": true
+      },
+      "vehicle_nms": {
+        "enabled": false,
+        "iou_threshold": 0.6,
+        "classes": [
+          "bus",
+          "car",
+          "motorcycle",
+          "truck"
+        ],
+        "input_count": 18,
+        "output_count": 18,
+        "removed_count": 0,
+        "suppressed_detections": []
+      },
+      "nms_method": "hard",
+      "soft_nms": null,
+      "candidate_threshold": 0.25,
+      "model_postprocess": {
+        "nms_iou": 0.5,
+        "topk_per_level": 1000,
+        "candidate_limit": 300
+      },
+      "detections": [
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.921255886554718,
+          "box_xyxy": [
+            312.4886474609375,
+            338.587890625,
+            415.4521789550781,
+            393.6645202636719
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8429692387580872,
+          "box_xyxy": [
+            428.88037109375,
+            336.2098388671875,
+            525.2222900390625,
+            396.7761535644531
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.8044559359550476,
+          "box_xyxy": [
+            138.5509490966797,
+            343.3957214355469,
+            178.72947692871094,
+            365.7587890625
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.7939799427986145,
+          "box_xyxy": [
+            0.39770108461380005,
+            351.10540771484375,
+            112.79949951171875,
+            436.70794677734375
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.7575297951698303,
+          "box_xyxy": [
+            388.29656982421875,
+            333.6535949707031,
+            450.6614685058594,
+            391.3792419433594
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.7348927855491638,
+          "box_xyxy": [
+            1.0823038816452026,
+            339.5942077636719,
+            38.25594711303711,
+            354.85101318359375
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.7121570110321045,
+          "box_xyxy": [
+            214.70538330078125,
+            336.02581787109375,
+            296.3802490234375,
+            379.89385986328125
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.6828123927116394,
+          "box_xyxy": [
+            29.679658889770508,
+            365.7026672363281,
+            262.38507080078125,
+            434.72247314453125
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.6305464506149292,
+          "box_xyxy": [
+            254.72483825683594,
+            343.0126647949219,
+            302.6579895019531,
+            380.10003662109375
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.6167779564857483,
+          "box_xyxy": [
+            48.006500244140625,
+            336.3382263183594,
+            115.30858612060547,
+            360.9207458496094
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.5506318211555481,
+          "box_xyxy": [
+            1.3450334072113037,
+            413.70501708984375,
+            37.666175842285156,
+            435.68951416015625
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.5115936994552612,
+          "box_xyxy": [
+            177.37350463867188,
+            332.9455261230469,
+            216.09701538085938,
+            369.21075439453125
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.4615474343299866,
+          "box_xyxy": [
+            404.57745361328125,
+            334.8042907714844,
+            491.47760009765625,
+            392.8482971191406
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.3982040584087372,
+          "box_xyxy": [
+            48.06398391723633,
+            337.2801818847656,
+            90.1482925415039,
+            351.5885009765625
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.3853832483291626,
+          "box_xyxy": [
+            205.24586486816406,
+            330.26873779296875,
+            279.4527893066406,
+            377.64984130859375
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.328016072511673,
+          "box_xyxy": [
+            198.344482421875,
+            330.5189514160156,
+            271.76153564453125,
+            375.43414306640625
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "car",
+          "score": 0.28984877467155457,
+          "box_xyxy": [
+            118.10816192626953,
+            339.154052734375,
+            135.6083526611328,
+            352.97979736328125
+          ]
+        },
+        {
+          "class_id": 8,
+          "class_name": "truck",
+          "score": 0.25646960735321045,
+          "box_xyxy": [
+            177.37350463867188,
+            332.9455261230469,
+            216.09701538085938,
+            369.21075439453125
+          ]
+        }
+      ]
+    }
+  ]
+}

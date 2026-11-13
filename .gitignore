@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.config/
+.ultralytics/
+**/weights/
+**/runs/
+*.pt
+*.pth
+*.docx
+*.pdf
+*.zip
+!task_2/optimization/coco_val_reference/runs/
+!task_2/optimization/coco_val_reference/runs/**

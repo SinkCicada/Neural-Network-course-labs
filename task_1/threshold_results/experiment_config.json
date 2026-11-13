@@ -1,0 +1,63 @@
+{
+  "hidden": 5,
+  "epochs": 30000,
+  "learning_rate": 0.3,
+  "model_seed": 7,
+  "split_seed": 20261110,
+  "on_values": [
+    0.6,
+    0.7,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "off_values": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "baseline": [
+    0.9,
+    0.1
+  ],
+  "selected": [
+    0.6,
+    0.4
+  ],
+  "validation_count": 282,
+  "test_count": 288,
+  "split_counts_per_letter": {
+    "1": [
+      7,
+      8
+    ],
+    "2": [
+      20,
+      20
+    ],
+    "3": [
+      20,
+      20
+    ]
+  },
+  "validation_selected": {
+    "on": 0.6,
+    "off": 0.4,
+    "flipped_pixels": "all",
+    "total": 282,
+    "correct": 278,
+    "wrong": 0,
+    "rejected": 4,
+    "correct_rate": 0.9858156028368794,
+    "wrong_rate": 0.0,
+    "rejection_rate": 0.014184397163120567
+  },
+  "selected_on_grid_boundary": true,
+  "selection": "min wrong, max correct, max on, min off; validation only",
+  "excludes": "six training templates and all original bp.make_tests samples",
+  "limitation": "single initialization and synthetic pixel flips around six templates; selected pair is best only in this candidate grid, not a global optimum"
+}
