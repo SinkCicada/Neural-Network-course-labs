@@ -14,7 +14,17 @@ python -m pip install -r requirements-bp.txt
 python -m pip install -r requirements-detection.txt
 ```
 
-目标检测依赖文件使用 CPU 版 PyTorch。权重文件体积较大，未放入仓库，下载方法见各模型目录的 README。
+目标检测依赖文件使用 CPU 版 PyTorch。四份检测权重放在本仓库的 [Release](https://github.com/SinkCicada/Neural-Network-course-labs/releases/tag/weights-v1) 中，BP 阈值实验的权重已保存在 `task_1/threshold_results/fixed_model.npz`。
+
+## 下载完整权重
+
+克隆仓库或下载并解压 ZIP 后，在仓库根目录执行：
+
+```powershell
+python download_weights.py
+```
+
+脚本下载 Faster R-CNN、RetinaNet、YOLOv8n 和 YOLOv8s 四份权重，共约 333 MB，自动保存到各模型所需目录，并核对 SHA-256。已有完整文件会跳过。文件清单见 `weights_manifest.json`，无需安装 Git LFS。
 
 ## 实验一：点阵字母识别
 
@@ -50,7 +60,7 @@ python task_2/yolov8/run.py --source task_2/yolov8/assets/bus.jpg --device cpu
 - `--tile-size 640 --tile-overlap 0.25`：对重叠切片和整图分别推理，将结果还原到原图后合并。
 - `--hide-labels`：密集图像只显示边框。
 
-共同的六张 COCO 验证图片、标注来源与比较结果见 [车辆检测对照](task_2/optimization/coco_val_reference/README.md)。
+六张 COCO 验证图片及 COCO8 的四张验证图片和标注已包含在仓库中。共同的六张 COCO 验证图片、标注来源与比较结果见 [车辆检测对照](task_2/optimization/coco_val_reference/README.md)。
 
 ## 检查
 
@@ -60,3 +70,12 @@ python -m unittest discover -s task_2/optimization -p "test_*.py"
 ```
 
 图片、权重和上游库的来源见各模型目录中的 `THIRD_PARTY.md`。
+
+## 重新计算检测对照
+
+```powershell
+python task_2/optimization/coco_val_reference/evaluate_reference.py
+python task_2/optimization/evaluate_sanity.py
+```
+
+第一条命令根据保存的检测框和真实标注重新计算六图对照；第二条使用 YOLOv8n/s 权重在 COCO8 四张验证图上重新推理。COCO8 仅用于小型运行检查。

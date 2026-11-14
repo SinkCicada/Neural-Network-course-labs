@@ -2,7 +2,7 @@
 
 在仓库根目录安装 `requirements-detection.txt`。
 
-权重下载：[官方文件](https://download.pytorch.org/models/retinanet_resnet50_fpn_coco-eeacb38b.pth)，保存为 `task_2/retinanet/weights/checkpoints/retinanet_resnet50_fpn_coco-eeacb38b.pth`。
+在仓库根目录执行 `python download_weights.py` 获取 Release 中的权重。也可手动下载：[官方文件](https://download.pytorch.org/models/retinanet_resnet50_fpn_coco-eeacb38b.pth)，保存为 `task_2/retinanet/weights/checkpoints/retinanet_resnet50_fpn_coco-eeacb38b.pth`。
 
 ```powershell
 python task_2/retinanet/run.py --device cpu

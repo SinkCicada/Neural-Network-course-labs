@@ -2,7 +2,7 @@
 
 在仓库根目录安装 `requirements-detection.txt`。
 
-权重下载：[官方文件](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt)，保存为 `task_2/yolov8/weights/yolov8n.pt`。
+在仓库根目录执行 `python download_weights.py` 获取 Release 中的权重。也可手动下载：[官方文件](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt)，保存为 `task_2/yolov8/weights/yolov8n.pt`。
 
 YOLOv8s：[官方下载](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s.pt)。保存到同一 weights 目录，运行时通过 `--weights task_2/yolov8/weights/yolov8s.pt` 指定。
 
